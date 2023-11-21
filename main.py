@@ -7,9 +7,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 app= FastAPI()
 
+ALL_ORIGINS=[
+    "https://fastapi-dyl9-production.up.railway.app"
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALL_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
