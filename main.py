@@ -23,7 +23,7 @@ class EmailItem(BaseModel):
     message: str
     to_email: str
 
-@app.post("/send-email/")
+@app.post("/send-email")
 def send_email(item: EmailItem):
     # Configura la conexión SMTP para Gmail
     smtp_server = "smtp.gmail.com"
